@@ -1,0 +1,23 @@
+{
+  "name": "updated_ats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "docx-parser": "^0.2.1",
+    "express": "^4.19.2",
+    "grammarbot": "^1.0.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "pdf-parse": "^1.1.1",
+    "spellchecker": "^3.7.1",
+    "twilio": "^5.2.3"
+  }
+}
