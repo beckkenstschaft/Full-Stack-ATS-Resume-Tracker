@@ -1,0 +1,708 @@
+:root {
+    --text-color: #333;
+    --background-color: #fff;
+    --link-color: #007bff;
+}
+
+/* Dark Theme Variables */
+[data-theme='dark'] {
+    --text-color: #ddd;
+    --background-color: #333;
+    --link-color: #1e90ff;
+}
+
+body {
+    font-family: 'Noto Sans','montserrat','suse', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-color: #fff;
+    padding: 30px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d9cdb;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #666;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 60px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2d9cdb;
+}
+
+.cta .btn {
+    text-decoration: none;
+    background-color: #2d9cdb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease-in;
+    border: none;
+    cursor: pointer;
+}
+
+.cta .btn:hover {
+    background-color: #5753c9;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.left-section {
+    padding: 40px;
+    flex: 1;
+}
+
+.left-section h2 {
+    color: #2d9cdb;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.left-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.right-section {
+    background-color: #f7f9fc;
+    padding: 40px;
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.analysis-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.analysis-card h3 {
+    color: #2d9cdb;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.analysis-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.analysis-card ul li {
+    margin-bottom: 20px;
+}
+
+.analysis-card ul li span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.skills-list span {
+    background-color: #e1e3f0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.skills-ratio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-ratio .chart {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#2d9cdb 50%, #e1e3f0 50%);
+}
+
+.skills-ratio p {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #f5f7fa;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    width: 90%;
+    margin-left: 70px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d9cdb;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #666;
+}
+
+.footer p {
+    color: #666;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #2d9cdb;
+}
+
+.entry-field {
+    width: 90%;
+    height: 40px;
+    border-style: solid;
+    border-color: rgb(189, 189, 189);
+    border-radius: 7px;
+    border-width: 0.1px;
+    padding-left: 10px;
+}
+
+#reason {
+    width: 90%;
+    height: 130px;
+    padding-left: 10px;
+    padding-top: 20px;
+    border-style: solid;
+    border-color: rgb(189, 189, 189);
+    border-radius: 7px;
+    border-width: 0.1px;
+}
+
+#result-wrapper {
+    padding: 50px;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ababab;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: 2px solid #2d9cdb;
+    /* border-radius: 8px; */
+    background-color: #2d9cdb;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #5753c9;
+    border-color: #5753c9;
+}
+
+input[type="file"]:hover {
+    border-color: #5753c9;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #5753c9;
+    box-shadow: 0 0 5px rgba(87, 83, 201, 0.5);
+}
+
+#backToTopBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button 20px from the bottom */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #2d9cdb;
+    /* Set background color */
+    color: #fff;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 50%;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 55px;
+}
+
+#backToTopBtn:hover {
+    background-color: #5753c9;
+    /* Change background on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge button */
+}
+
+/* Score Bar Wrapper */
+#scoreBarWrapper {
+    width: 90%;
+    background-color: #fff;
+    /* Light background color */
+    border-radius: 5px;
+    /* padding: 5px; */
+    margin-top: 10px;
+}
+
+/* Score Bar */
+#scoreBar {
+    height: 20px;
+    border-radius: 5px;
+    width: 0;
+    /* Start with 0 width */
+
+    transition: width 1s ease-in-out;
+    /* Smooth transition */
+}
+
+/* Base styles for dark mode */
+body.dark-mode {
+    background-color: #313131;
+    /* Dark background for the entire page */
+    color: #fff;
+    /* Light text color */
+}
+
+/* Navbar and Header Dark Mode */
+body.dark-mode header,
+body.dark-mode .navbar {
+    background-color: #222;
+    /* Darker background for the navbar */
+    color: #fff;
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+    /* Ensure the navbar links are visible */
+}
+
+body.dark-mode .navbar a:hover {
+    color: #ccc;
+    /* Slightly lighter color on hover */
+}
+
+/* Buttons in dark mode */
+body.dark-mode .btn-primary {
+    background-color: #007bff;
+    /* Primary button color */
+    border-color: #007bff;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #0056b3;
+    /* Darker on hover */
+    border-color: #0056b3;
+}
+
+/* Dark mode for sections */
+body.dark-mode #second-section,
+body.dark-mode #third-section,
+body.dark-mode .landing-page,
+body.dark-mode .analysis-card {
+    background-color: #333;
+    /* Consistent dark background */
+    color: #fff;
+    /* Light text */
+}
+
+body.dark-mode .right-section {
+    background-color: #171717;
+}
+
+/* Dark mode for specific containers */
+body.dark-mode .container,
+body.dark-mode .content-wrapper,
+body.dark-mode .main-container {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Dark mode for the right section analysis card */
+body.dark-mode .analysis-card {
+    background-color: #444;
+    /* Darker background for contrast */
+    color: #fff;
+    border: 1px solid #666;
+    /* Optional: border for distinction */
+}
+
+/* Suggestions and Mistakes Bubbles */
+body.dark-mode .suggestion-bubble,
+body.dark-mode .mistake-bubble {
+    background-color: #555;
+    /* Dark background for bubbles */
+    color: #fff;
+}
+
+body.dark-mode .suggestion-bubble {
+    background-color: #28a745;
+    /* Green for suggestions */
+    color: #fff;
+}
+
+body.dark-mode .mistake-bubble {
+    background-color: #dc3545;
+    /* Red for mistakes */
+    color: #fff;
+}
+
+/* Footer Dark Mode */
+body.dark-mode footer {
+    background-color: #444;
+    /* Dark footer */
+    color: #fff;
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+    color: #1e90ff;
+    /* Light blue links */
+}
+
+body.dark-mode a:hover {
+    color: #87cefa;
+    /* Lighter on hover */
+}
+
+/* Adjust form elements in dark mode */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode select::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #ccc;
+}
+
+/* Adjust skill list in dark mode */
+body.dark-mode .skill-list {
+    background-color: #555;
+    /* Darker background for skill list */
+    color: #fff;
+    /* Ensure text is visible */
+}
+
+/* Additional classes for uniform dark mode experience */
+body.dark-mode .dark-background {
+    background-color: #333;
+}
+
+body.dark-mode .dark-text {
+    color: #fff;
+}
+
+/* Specific adjustments */
+body.dark-mode #right-section {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Dark Mode - Landing Page */
+body.dark-mode .landing-page {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .content-wrapper {
+    background-color: #444;
+}
+
+/* Dark Mode - Footer */
+body.dark-mode .footer {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-mode .footer-links a {
+    color: #fff;
+}
+
+body.dark-mode .footer-links a:hover {
+    color: #ccc;
+}
+
+/* Dark Mode - Buttons and Links */
+body.dark-mode .cta .btn {
+    background-color: #5753c9;
+}
+
+body.dark-mode .cta .btn:hover {
+    background-color: #2d9cdb;
+}
+
+/* Dark Mode - Analysis Card */
+body.dark-mode .analysis-card {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .analysis-card span {
+    color: #ccc;
+}
+
+body.dark-mode .analysis-card p {
+    color: #fff;
+}
+
+/* Dark Mode - Skills List */
+body.dark-mode .skills-list span {
+    background-color: #555;
+}
+
+#responsiveButton {
+    display: none;
+}
+
+.help-buttons .btn {
+    text-decoration: none;
+    background-color: #2d9cdb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease-in;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar styles for modal effect */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateY(0);
+}
+
+.close-btn {
+    font-size: 50px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: block;
+    margin-top: 100px;
+}
+
+.help-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media (max-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10%;
+    }
+
+    .header-top {
+        width: 90%;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    #navbar-buttons {
+        display: none;
+    }
+
+    #responsiveButton {
+        display: block;
+        position: fixed;
+        right: 20px;
+        padding: 10px;
+        font-size: 25px;
+        background: none;
+        background-color: none;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+/* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; */

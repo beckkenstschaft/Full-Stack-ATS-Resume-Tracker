@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hardCoded | Contact us</title>
+    <link rel="stylesheet" href="samplestyle.css">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <!-- <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">hard<span>Coded</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br> -->
+
+    <header class="header-top">
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">hard<span>Coded</span></a>
+            </div>
+
+            <button id="responsiveButton" class="hidden menu-btn">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cta" id="navbar-buttons">
+                <a href="resume-checker.html" class="btn">Scan Resume</a>
+                <a href="work-in-progress.html" class="btn">AI Assistance</a>
+                <a id="themeToggle" class="btn">Dark Mode</a>
+            </div>
+        </nav>
+
+    </header>
+    <br><br><br>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="logo">
+            <a href="index.html">hard<span>Coded</span></a>
+        </div>
+        <br><br><br><br>
+
+        <div class="help-buttons">
+            <p>Links</p>
+            <div class="help-links">
+                <a href="index.html" class="btn">Home</a>
+                <a href="about.html" class="btn">About</a>
+                <a href="contact.html" class="btn">Contact</a>
+            </div>
+
+            <br><br>
+            <p>Options</p>
+            <div class="options">
+                <a href="resume-checker.html" class="btn">Scan Resume</a>
+                <a href="work-in-progress.html" class="btn">AI Assistance</a>
+                <a id="themeToggle" class="btn">Dark Mode</a>
+            </div>
+        </div>
+
+        <button id="closeSidebar" class="close-btn">&times;</button>
+
+    </aside>
+
+
+    <section class="landing-page" id="first-section">
+        <div class="content-wrapper">
+            <div class="left-section">
+                <h2>Support</h2><br>
+                <p>
+                    If you need help, please email us at: <br><br><a
+                        href="mailto:support@hardcoded.com">support@hardcoded.com</a>
+                </p>
+            </div>
+
+            <div class="right-section">
+                <main class="main">
+                    <h1>Please enter the your details below.</h1><br>
+                    <div class="referral-form">
+                        <form action="/contact" method="POST">
+                            <!-- <label for="name">Recipient Name</label><br> -->
+                            <input type="text" id="name" name="name" required placeholder="Name" class="entry-field">
+                            <br><br>
+
+                            <!-- <label for="position">Position</label><br> -->
+                            <input type="text" id="position" name="position" required placeholder="Email"
+                                class="entry-field">
+                            <br><br>
+
+                            <!-- <label for="reason">Describe Your Skills</label><br> -->
+                            <textarea id="reason" name="reason" rows="4" required placeholder="message">
+                            </textarea>
+                            <br><br><br>
+
+                            <div class="cta">
+                                <button type="submit" class="btn">Send message</button><br>
+                            </div><br><br>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <a href="index.html">hard<span>Coded</span></a>
+            </div>
+            <br>
+            <p>Copyright © 2024 hardCoded</p>
+            <br>
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="privacy.html">Privacy policy</a></li>
+                <li><a href="terms.html">Terms of service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="samplescript.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(this);
+
+            fetch('/contact', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+                .then(response => response.text())
+                .then(result => {
+                    alert(result);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error sending your message. Please try again.');
+                });
+        });
+    </script>
+
+</body>
+
+</html>
